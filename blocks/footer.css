@@ -1,8 +1,8 @@
 .footer {
-  height: 136px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 0;
 }
 
 .footer__copyright {

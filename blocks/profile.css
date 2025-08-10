@@ -5,6 +5,7 @@
 }
 
 .profile__avatar {
+  object-fit: cover;
   margin-right: 20px;
   border-radius: 8px;
   height: 190px;
@@ -26,6 +27,8 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  line-height: 100%;
+  color: rgba(33, 33, 33, 1);
 }
 
 .profile__description {
@@ -60,6 +63,7 @@
 
 .profile__edit-btn:hover {
   color: rgba(33, 33, 33, 1);
+  cursor: pointer;
 }
 
 .profile__pencil {
@@ -88,6 +92,7 @@
 
 .profile__add-btn:hover {
   background-color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
 }
 
 .profile__plus {
@@ -114,7 +119,6 @@
   .profile__name {
     margin: 0 0 6px;
     font-size: 20px;
-    height: 20px;
     line-height: 20px;
     max-width: 288px;
   }
