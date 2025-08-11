@@ -42,13 +42,13 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 350px;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 @media screen and (max-width: 630px) {
   .card {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
   }
 
