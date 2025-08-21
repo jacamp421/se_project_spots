@@ -117,7 +117,7 @@
       <footer class="footer page__section">
         <p class="footer__copyright">2025 &copy; John Campoverde - Spots</p>
       </footer>
-      <div class="modal modal_is-open">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <div class="modal__header">
             <h2 class="modal__title">Edit profile</h2>
@@ -139,7 +139,36 @@
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
-                placeholder="Describe yourself!"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="new-post-modal">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h2 class="modal__title">New Post</h2>
+            <button type="button" class="modal__close-btn"></button>
+          </div>
+          <form class="modal__form">
+            <label for="prfile-image-input" class="modal__label"
+              >Image link
+              <input
+                id="profile-image-input"
+                type="text"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="new-caption-input" class="modal__label"
+              >Caption
+              <input
+                id="new-caption-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
@@ -147,5 +176,6 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
