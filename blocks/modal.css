@@ -1,7 +1,7 @@
 .modal {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s linear 0.5s, opacity 0.5s linear;
   background-color: rgba(33, 33, 33, 0.4);
   position: fixed;
   top: 0;
@@ -26,6 +26,7 @@
   border-radius: 8px;
   background-color: white;
   padding: 32px 50px;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
@@ -38,6 +39,10 @@
 
 .modal__close-btn:hover {
   cursor: pointer;
+}
+
+.modal__close-btn:focus {
+  outline: 2px solid blue;
 }
 
 .modal__title {
@@ -87,6 +92,11 @@
   padding: 16px 0 12px;
 }
 
+.modal__input:focus {
+  border: 2px solid #0066cc;
+  outline: none;
+}
+
 .modal__submit-btn {
   max-width: 156px;
   height: 52px;
@@ -98,6 +108,10 @@
 
 .modal__submit-btn:hover {
   cursor: pointer;
+}
+
+.modal__submit-btn:focus {
+  outline: 2px solid blue;
 }
 
 @media screen and (max-width: 630px) {
