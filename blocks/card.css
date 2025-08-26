@@ -31,10 +31,6 @@
   cursor: pointer;
 }
 
-.card__like-btn:focus {
-  outline: 2px solid blue;
-}
-
 .card__title {
   font-size: 20px;
   font-weight: 500;
