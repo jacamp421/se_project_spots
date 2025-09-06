@@ -48,6 +48,11 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostLinkInput = newPostModal.querySelector("#new-link-input");
 const newPostCaptionInput = newPostModal.querySelector("#new-caption-input");
 
+const previewModal = document.querySelector("#preview-modal");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
+const previewImageEl = previewModal.querySelector(".modal__image");
+const previewCaptionEl = previewModal.querySelector(".modal__caption");
+
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
@@ -71,10 +76,21 @@ function getCardElement(data) {
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
+
+  cardImageEl.addEventListener("click", () => {
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    previewCaptionEl.textContent = data.name;
+    openModal(previewModal);
+  });
+
   return cardElement;
 }
+
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
@@ -125,6 +141,8 @@ function handleNewPostSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+
+  newPostForm.reset();
 
   closeModal(newPostModal);
 }
