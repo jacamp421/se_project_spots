@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 627px) {
   .cards {
     padding-bottom: 20px;
   }
