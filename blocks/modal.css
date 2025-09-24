@@ -169,11 +169,12 @@
 
   .modal__input {
     font-size: 16px;
-    margin-bottom: 24px;
   }
 
   .modal__label {
     font-size: 16px;
+    margin-bottom: 24px;
+
   }
 
   .modal__submit-btn {
