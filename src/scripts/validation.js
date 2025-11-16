@@ -1,4 +1,4 @@
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -7,21 +7,21 @@ const settings = {
   errorClass: "modal__error",
 };
 
-const showInputError = (formEl, inputEl, errorMsg, config) => {
+export const showInputError = (formEl, inputEl, errorMsg, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
   inputEl.classList.add(config.inputErrorClass);
   errorMsgEl.classList.add(config.errorClass);
 };
 
-const hideInputError = (formEl, inputEl, config) => {
+export const hideInputError = (formEl, inputEl, config) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
   inputEl.classList.remove(config.inputErrorClass);
   errorMsgEl.classList.remove(config.errorClass);
 };
 
-const checkInputValidity = (formEl, inputEl, config) => {
+export const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     console.log(inputEl.validationMessage);
     showInputError(formEl, inputEl, inputEl.validationMessage, config);
@@ -36,7 +36,7 @@ const checkInputValidity = (formEl, inputEl, config) => {
     });
   };
 
-const toggleButtonState = (inputList, buttonEl, config) => {
+export const toggleButtonState = (inputList, buttonEl, config) => {
   console.log(hasInvalidInput(inputList));
   if (hasInvalidInput(inputList)) {
     disableBtn(buttonEl, config);
@@ -47,18 +47,18 @@ const toggleButtonState = (inputList, buttonEl, config) => {
   }
 };
 
-const disableBtn = (buttonEl, config) => {
+export const disableBtn = (buttonEl, config) => {
   buttonEl.disabled = true;
   buttonEl.classList.add(config.inactiveButtonClass)
 };
 
-const resetValidation = (formEl, inputList, config) => {
+export const resetValidation = (formEl, inputList, config) => {
   inputList.forEach((input) => {
     hideInputError(formEl, input, config);
   });
 };
 
-const setEventListners = (formEl, config) => {
+export const setEventListners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
@@ -72,10 +72,9 @@ const setEventListners = (formEl, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formEl) => {
     setEventListners(formEl, config);
   });
 };
-enableValidation(settings);
