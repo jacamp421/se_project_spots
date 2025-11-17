@@ -280,6 +280,8 @@ function handleNewPostSubmit(evt) {
 function handleEditAvatarSubmit(evt) {
   evt.preventDefault();
 
+  editAvatarSubmitBtn.textContent = "Saving...";
+
   const newAvatarUrl = editAvatarLinkInput.value;
 
   api
@@ -292,7 +294,10 @@ function handleEditAvatarSubmit(evt) {
       disableBtn(editAvatarSubmitBtn, settings);
       closeModal(editAvatarModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      editAvatarSubmitBtn.textContent = "Save";
+    });
 }
 
 function handleDeleteSubmit(evt) {
