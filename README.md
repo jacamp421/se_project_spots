@@ -22,4 +22,6 @@ This webpage is deployed to GitHub Pages
 - Deployment Link:
   https://jacamp421.github.io/se_project_spots/
 - YouTube Link:
-  https://www.youtube.com/watch?v=CNEr0fBIpi4
+  https://www.youtube.com/watch?v=CNEr0fBIpi4 (Old)
+- Project Pitch:
+  https://drive.google.com/file/d/1kWSqYckrXPTOGjcrSjwC71V9hheiFWPK/view?usp=sharing
